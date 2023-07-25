@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #BED0E1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container{
+    background-color: #fff;
+    padding: 20px 50px; /*kenarlara 20 köşelere 50px*/
+    border-radius: 15px; /*kenarları yuvarladı*/
+    box-shadow: 2px 3px 10px;
+}
+
+.container h1{
+    margin-bottom: 30px; /*yazının altına 30px lik boşluk bıraktı*/
+    text-align: center;
+}
+
+.container a{
+    text-decoration: none; /*metin yönü*/
+    color:#88606E;
+    margin: 35px;
+}
+
+.form-control{
+    position: relative;
+    margin: 45px 25px 40px; /*e posta ve şifere arasındaki boşluk için*/
+
+}
+
+.form-control input{
+    border: 0; /*eposta ve şifre ksımındaki boşlukları attı*/
+    border-bottom: 2px solid #999; /*e posta ve şifre ksısmına çizgi atıyor*/
+    display: block; /*alt alta getirdi*/
+    width: 100%;
+    padding: 15px;
+}
+
+.form-control input:focus, /*kenarlıkları kaldırır*/
+.form-control input:valid{ /*e posta ve şifre yazdığında geçerliliği kontrol eder*/
+    outline: none; /* varsayılan olarak uygulanan kenarlık (outline) stilini kaldırır. */
+    border-bottom-color:#999 ; /*alt çizgi*/
+    font-size: 16px; /*yazı tipi*/
+}
+
+.btn{
+    cursor:pointer; /*fare işaretçisinin üzerine geldiğinde işaretçinin el şeklinde olmasını sağlar*/
+   /* display: inline-block;/*öğenin içeriğini oluşturduğu kutu boyutunda olmasını ve yan yana durmasını sağlar.*/
+    width: 100%;
+    background-color: #A16775;
+    border: none;
+    color:#fff;
+    font-size: 16px;
+    padding: 15px; /*giriş kısmının kenarlarını büyüttü*/
+    border-radius: 15px;
+}
+
+.btn:focus{
+    outline: none;
+}
+ 
+.btn:active{ /*butonu aktif duruma getirir*/
+    transform: scale(0,98);
+    /*.btn sınıfına ait öğeler tıklandığında, boyutları %98 oranında küçülerek hafif bir animasyon efekti ile tepki verirler.
+     Bu, kullanıcıya tıklama işleminin algılandığını ve etkileşime geçildiğini belirtir.*/
+}
+
+.text{
+    font-size: 13px; /*girişin altındaki yazılar için*/
+    margin-top: 25px;/*girişten uzaklaştırdık*/ 
+}
+
+.form-control label {
+    position: absolute; /*e posta ve şifre ksıımlarını çizgilerin üstüne çıkardık*/
+    top:15px;
+    left: 0;
+
+}
+
+.form-control label span{
+    display: inline-block;
+    font-size: 18px;
+    transition: 0.3s cubic-bezier(0.7,-0.6,0.3,1.55);
+    /*Bu stil tanımlaması, etiketin span elemanına geçiş (transition) efekti uygular.
+     0.3s süresince, elemanın stil değişiklikleri animasyonlu bir şekilde gerçekleşir.
+      cubic-bezier(0.7, -0.6, 0.3, 1.55) ise geçişin animasyon hızını belirler. 
+      Bu, animasyonun başlangıcı ve bitişiyle ilgili eğrileri belirtir ve farklı geçiş efektleri elde etmenize olanak tanır.*/
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span{
+    color:#999;
+    transform: translateY(-30px);
+}
+
+.Login-font{
+font-size: 70px;
+color:black;
+}
+
+
